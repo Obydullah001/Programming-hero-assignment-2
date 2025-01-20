@@ -13,13 +13,13 @@
  .nav-bar{
     display: flex;
     justify-content: space-around;
+    /* border-bottom: 2px none solid orange; */
  }
  .nav-link{
     text-decoration: none;
  } 
- nav ul li a {
-    text-transform: uppercase;
- }
+ /* nav ul li a {
+    text-transform: uppercase; */
  .nav-title{
     margin-left: 11px;
  }
@@ -30,7 +30,7 @@
     color: orange;
  }
  .nav-about{
-    color: skyblue;
+    color: #01ACFD;
  }
  .nav-fact{
     color: #05D4DF;
@@ -54,6 +54,46 @@
  #check {
     display: none;
   }
+  /* banner related style */
+
+  .banner-heading{
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  .banner-description{
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+  .btn-secondary{
+    color: white;
+    background-color: black;
+    padding: 10px 47px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.25rem;
+  }
+  #empower{
+    color: orange;
+  }
+  #vision{
+    color: #01ACFD;
+  }
+  .banner{
+    max-width: 1140px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+  .banner-img{
+    max-width: 465px;
+  }
+  .banner-title{
+    max-width: 630px;
+    margin-right: 50px;
+  }
+  .banner-img{
+    width: 100%;
+  }
 /* shared styles */
 .display-flex{
     display: flex;
@@ -61,14 +101,71 @@
 .header-section{
     margin: 20px auto;
 }
+/* section related style */
+.curriculum{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 29px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.section-heading{
+    text-align: center;
+    font-size: 2.85rem;
+    font-weight: 700;
+}
+.standard{
+    max-width: 1170px;
+    margin: 0 auto;
+    background-image: url(../assets/bg.png);
+}
+.kinder , .elementary,.middle{
+    text-align: center;
+    padding: 55px 40px;
+    border-radius: 19px; 
+}
+.kinder{
+    background-image:linear-gradient(#DEF5FF,#FFFFFF);
+    border: 1px solid#DEF5FF;
+}
+.elementary{
+    background-image:linear-gradient(#F7DB95,#FFFFFF);
+    border: 1px solid#F7DB95;
+}
+.middle{
+    background-image:linear-gradient(#F2E8FF,#FFFFFF) ;
+    border:1px  solid#8700FF;
+}
+/* button related styles */
+.btn-kinder{
+    color: #64C8FF;
+    text-decoration: none;
+}
+
+.btn-element{
+    color: #F0AA00;
+    text-decoration: none;
+}
+.btn-middle{
+    color: #8700FF;
+    text-decoration: none;
+}
+.checked{
+    color: orange;
+}
+.circle{
+    text-align: center;
+    margin: 80px auto;
+}
 
 @media screen and (max-width : 576px) {
     .checkbtn {
         display: block;
         order: 1;
-        margin-right: 20px;
+        /* margin-right: 20px; */
       }
-      ul {
+      /* ul {
         position: fixed;
         top: 80px;
         right: -100%;
@@ -80,9 +177,13 @@
         justify-content: center;
         align-items: center;
         transition: all 0.3s;
-      }
-    .nav-title, .btn-primary{
+      } */
+    .nav-title,.nav-links, .btn-primary{
         display: none;
+
+    }
+    .nav-bar {
+        border-bottom: 1px solid orange;
     }
     ul li {
         margin: 20px 0;
@@ -90,7 +191,21 @@
       ul li a {
         font-size: 20px;
       }
-      #check:checked ~ ul {
+       #check:checked ~ ul {
         right: 0;
+      } 
+      .banner{
+        flex-direction: column-reverse;
       }
+      .banner-title{
+        text-align: center;
+      }
+      .curriculum{
+        display:grid;
+        grid-template-columns: repeat(1,1fr);
+        margin: auto 10%;
+    }
+        .circle{
+            display:none;
+        }
 }
