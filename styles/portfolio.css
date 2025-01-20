@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+.quicksand-normal-font {
+  font-family: "Quicksand", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+/* navbar related styles */
+ nav ul li{
+    list-style: none;
+ }
+ .nav-bar{
+    display: flex;
+    justify-content: space-around;
+ }
+ .nav-link{
+    text-decoration: none;
+ } 
+ nav ul li a {
+    text-transform: uppercase;
+ }
+ .nav-title{
+    margin-left: 11px;
+ }
+ .nav-item{
+    margin-right: 32px;
+ }
+ .nav-home{
+    color: orange;
+ }
+ .nav-about{
+    color: skyblue;
+ }
+ .nav-fact{
+    color: #05D4DF;
+ }
+ .nav-add{
+    color: #5D58EF;
+ }
+ .btn-primary{
+    color: white;
+    background-color: orange;
+    border-radius: 12px;
+    padding: 10px 61px;
+    border: none;
+ }
+ .checkbtn{
+    color: black;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+ }
+ #check {
+    display: none;
+  }
+/* shared styles */
+.display-flex{
+    display: flex;
+}
+.header-section{
+    margin: 20px auto;
+}
+
+@media screen and (max-width : 576px) {
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 20px;
+      }
+      ul {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        background-color:white;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+      }
+    .nav-title, .btn-primary{
+        display: none;
+    }
+    ul li {
+        margin: 20px 0;
+      }
+      ul li a {
+        font-size: 20px;
+      }
+      #check:checked ~ ul {
+        right: 0;
+      }
+}
