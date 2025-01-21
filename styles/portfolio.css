@@ -95,6 +95,12 @@
     width: 100%;
   }
 /* shared styles */
+
+  /* border: 1px solid red; */
+
+body{
+  border: 2px dashed green;
+}
 .display-flex{
     display: flex;
 }
@@ -127,11 +133,11 @@
 }
 .kinder{
     background-image:linear-gradient(#DEF5FF,#FFFFFF);
-    border: 1px solid#DEF5FF;
+    border: 1px solid#64C8FF;
 }
 .elementary{
     background-image:linear-gradient(#F7DB95,#FFFFFF);
-    border: 1px solid#F7DB95;
+    border: 1px solid#F0AA00;
 }
 .middle{
     background-image:linear-gradient(#F2E8FF,#FFFFFF) ;
@@ -151,13 +157,107 @@
     color: #8700FF;
     text-decoration: none;
 }
+.storybtn-1{
+  color: white;
+  background-color: #3CD8E8;
+  border-radius: 47.93px;
+  padding: 15px 18px;
+  border: none;
+}
+.kids-01{
+  margin-top: -25px;
+  margin-left: 38px;
+}
+.kids-02{
+  margin-top: -25px;
+  margin-left: 39px;
+}
+.storybtn-2,.storybtn-4,.storybtn-5{
+  color: #FFFFFF;
+  background-color: #95B226;
+  border-radius: 47.93px;
+  border: none;
+  padding: 10px 19px;
+  /* margin-bottom: -90px; */
+}
+.storybtn-3{
+  color: #FFFFFF;
+  background-color: #5D58F0;
+  border-radius: 47.93px;
+  border: none;
+  padding: 10px 19px;
+}
 .checked{
     color: orange;
+}
+.btn-view{
+  text-align: center;
+  justify-content: center;
+  margin: 80px auto;
 }
 .circle{
     text-align: center;
     margin: 80px auto;
 }
+.stories{
+  background-image: linear-gradient(#FFFFFF,rgba(247, 219, 149, 1));url(../assets/bg.png);
+}
+
+/* story related styles */
+.story01-heading{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.stories{
+  max-width: 1160px;
+  margin: 60px auto;
+}
+.standard-heading,.stories-heading{
+  font-weight: 700;
+  font-size: 2.85rem;
+  text-align: center;
+}
+.stories-card01{
+  max-width: 541px ;
+  /* padding: 58px 38px 35px 38px; */
+  }
+.stories-content{
+  /* border: 1px solid white; */
+  display: grid;
+  grid-template-columns: repeat(2,2fr);
+  /* max-width: 601px; */
+  gap: 19px; 
+  background-color: #FFFFFF;
+  max-width: 540px;
+  border-radius: 16px;
+}
+.four-stories{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 19px ;
+  margin: 0 auto;
+  /* margin-right: 19px ; */
+}
+.stories-card{
+  max-width: 290px;
+  border-radius: 16px;
+  background-color: #FFFFFF;
+  /* padding: px; */
+  max-height: 300px;
+  width: 100%;
+  text-align: normal ;
+}
+.stories-p{
+  font-size: 1rem;
+  font-weight: 700;
+  padding-left: 38px;
+  padding-bottom: 33px;
+}
+.story-1{
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
 
 @media screen and (max-width : 576px) {
     .checkbtn {
