@@ -6,6 +6,17 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+.raleway-normal-font {
+  font-family: "Raleway", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* navbar related styles */
  nav ul li{
     list-style: none;
@@ -148,7 +159,9 @@ body{
     color: #64C8FF;
     text-decoration: none;
 }
-
+.bg-image{
+  background-image: url(../assets/bg.png);
+}
 .btn-element{
     color: #F0AA00;
     text-decoration: none;
@@ -194,15 +207,27 @@ body{
   text-align: center;
   justify-content: center;
   margin: 80px auto;
+  align-items: center;
 }
 .circle{
     text-align: center;
     margin: 80px auto;
 }
 .stories{
-  background-image: linear-gradient(#FFFFFF,rgba(247, 219, 149, 1));url(../assets/bg.png);
+  content: relative;
+  background-image: url(../assets/bg.png),linear-gradient(white, rgba(247, 219, 149, 1));
 }
-
+  
+}
+/* .stories::before{
+  background: linear-gradient(to bottom rgb(243, 243, 243), rgba(172, 177, 38, 0.968));
+  z-index: 1;
+}
+.stories::after{
+  background: linear-gradient(to right, rgba(255, 0, 0, 0.3), rgba(0, 0, 255, 0.3));
+  z-index: 2; */
+}
+/* linear-gradient(#FFFFFF,rgba(247, 219, 149, 1)) */
 /* story related styles */
 .story01-heading{
   font-size: 1.5rem;
@@ -231,11 +256,15 @@ body{
   max-width: 540px;
   border-radius: 16px;
 }
+/* .story-1{
+  width: 100%;
+} */
 .four-stories{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   gap: 19px ;
   margin: 0 auto;
+  width: 100%;
   /* margin-right: 19px ; */
 }
 .stories-card{
@@ -257,7 +286,40 @@ body{
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
+.footer-section{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  background-color: #01ACFD;
+  max-width: 1160px;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  color: white;
+}
+footer{
+  margin: 0px auto;
+}
+footer ul{
+ list-style:none ;
+align-items: right;
 
+}
+footer ul li a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+.education-header{
+max-width: 400px;
+/* margin: 0 30px; */
+}
+.footer-about{
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.touch-icon{
+  font-size: 1.625rem;
+}
 
 @media screen and (max-width : 576px) {
     .checkbtn {
@@ -283,7 +345,9 @@ body{
 
     }
     .nav-bar {
-        border-bottom: 1px solid orange;
+      border: 1px solid orange;
+      border-top: none;
+        box-sizing: border-box;
     }
     ul li {
         margin: 20px 0;
@@ -305,7 +369,34 @@ body{
         grid-template-columns: repeat(1,1fr);
         margin: auto 10%;
     }
-        .circle{
+        .circle,.stories-card01{
             display:none;
         }
+        .four-stories{
+          display: grid;
+          justify-items: center;
+          grid-row-gap: 11px;
+          margin: 0 auto;
+          max-width: 170px;
+         }
+         .story-1{
+          width: 100%;
+        }
+        .btn-view{
+          text-align: center;
+          justify-content: center;
+          margin: 80px auto;
+          align-items: center;
+        }
+          .kids-02{
+            margin-top: -25px;
+            margin-left: 20px;
+          }
+          .footer-section{
+            display: grid;
+            grid-template-columns: repeat(1,3fr)
+          }
+         .stories-card{
+          /* max-width: fit-content; */
+         }
 }
