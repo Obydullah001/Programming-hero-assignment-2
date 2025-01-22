@@ -116,9 +116,9 @@
 
   /* border: 1px solid red; */
 
-body{
+/* body{
   border: 2px dashed green;
-}
+} */
 .display-flex{
     display: flex;
 }
@@ -237,6 +237,12 @@ body{
 .circle{
     text-align: center;
     margin: 80px auto;
+}
+
+.circle :hover{
+  background-color: violet;
+  width:10%;
+  
 }
 .stories{
   content: relative;
@@ -377,6 +383,7 @@ footer ul li a{
   font-size: 1.65rem;
 }
 
+
 @media screen and (max-width : 576px) {
     .checkbtn {
         display: block;
@@ -400,9 +407,12 @@ footer ul li a{
         display: none;
 
     }
+    .banner-heading{
+      font-size: 2rem;
+    }
     .nav-bar {
-      border: 1px solid orange;
-      border-top: none;
+      border: 2px solid orange;
+      /* border-top: none; */
         box-sizing: border-box;
     }
     ul li {
