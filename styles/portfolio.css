@@ -7,9 +7,8 @@
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-.raleway-normal-font {
+.raleway-font {
   font-family: "Raleway", serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -25,9 +24,14 @@
     display: flex;
     justify-content: space-around;
     /* border-bottom: 2px none solid orange; */
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: center;
  }
  .nav-link{
     text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 500;
  } 
  /* nav ul li a {
     text-transform: uppercase; */
@@ -55,6 +59,8 @@
     border-radius: 12px;
     padding: 10px 61px;
     border: none;
+    font-weight: 600;
+    font-size: 1.25rem;
  }
  .checkbtn{
     color: black;
@@ -82,6 +88,7 @@
     border: none;
     border-radius: 12px;
     font-size: 1.25rem;
+    font-weight: 700;
   }
   #empower{
     color: orange;
@@ -137,10 +144,20 @@ body{
     margin: 0 auto;
     background-image: url(../assets/bg.png);
 }
+.kinder-graph{
+  font-size: 1rem;
+  color: rgba(128, 128, 128, 1);
+  font-weight: 500;
+}
+.kinder-head{
+  font-size: 1.50rem;
+  font-weight: 700;
+}
 .kinder , .elementary,.middle{
     text-align: center;
     padding: 55px 40px;
     border-radius: 19px; 
+    box-shadow: 0 0 28 1 rgba(0, 0, 0, 0.05);
 }
 .kinder{
     background-image:linear-gradient(#DEF5FF,#FFFFFF);
@@ -158,6 +175,8 @@ body{
 .btn-kinder{
     color: #64C8FF;
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
 }
 .bg-image{
   background-image: url(../assets/bg.png);
@@ -165,10 +184,14 @@ body{
 .btn-element{
     color: #F0AA00;
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
 }
 .btn-middle{
     color: #8700FF;
     text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
 }
 .storybtn-1{
   color: white;
@@ -191,6 +214,7 @@ body{
   border-radius: 47.93px;
   border: none;
   padding: 10px 19px;
+  font-size: 15px;
   /* margin-bottom: -90px; */
 }
 .storybtn-3{
@@ -199,6 +223,7 @@ body{
   border-radius: 47.93px;
   border: none;
   padding: 10px 19px;
+  font-size: 15px;
 }
 .checked{
     color: orange;
@@ -267,6 +292,15 @@ body{
   width: 100%;
   /* margin-right: 19px ; */
 }
+main{
+  max-width: 1440px;
+  content: relative;
+  background-image: url(../assets/bg.png),linear-gradient(white, rgba(247, 219, 149, 1));
+  margin: 0 auto;
+}
+.standard{
+  background-color: white;
+}
 .stories-card{
   max-width: 290px;
   border-radius: 16px;
@@ -286,39 +320,61 @@ body{
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
 }
+.footer-content{
+  background-color: #01ACFD;
+  color: #ffffff;
+  max-width: 1440px;
+}
+.footer-heading{
+  font-size: 2.6rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+.footer-01{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  max-width: 299px;
+}
+.footer-p{
+  font-size: 1.25rem;
+}
+.footer-image{
+  margin-top: 43px;
+}
+.footer-section-01{
+  max-width: 390px;
+}
 .footer-section{
   display: grid;
-  grid-template-columns: repeat(3,1fr);
-  background-color: #01ACFD;
-  max-width: 1160px;
-  margin: 0 auto;
+  grid-template-columns:repeat(3,1fr);
+  gap: 120px;
+  margin: 75px;
   justify-content: space-evenly;
-  color: white;
+  padding-bottom: 100px;
+  max-width: 1170px;
 }
 footer{
-  margin: 0px auto;
+  margin: 0 auto;
 }
-footer ul{
- list-style:none ;
-align-items: right;
-
+.about-links{
+  list-style: none;
 }
 footer ul li a{
-  color: white;
   text-decoration: none;
+  color: white;
   font-size: 1.25rem;
   font-weight: 500;
 }
-.education-header{
-max-width: 400px;
-/* margin: 0 30px; */
+.about , .touch{
+  margin-top: 43px;
 }
 .footer-about{
-  font-size: 1.5rem;
   font-weight: 700;
+  font-size: 1.5rem;
 }
 .touch-icon{
-  font-size: 1.625rem;
+  font-weight: 700;
+  font-size: 1.65rem;
 }
 
 @media screen and (max-width : 576px) {
@@ -363,11 +419,15 @@ max-width: 400px;
       }
       .banner-title{
         text-align: center;
+        margin: 10% auto;
       }
       .curriculum{
         display:grid;
         grid-template-columns: repeat(1,1fr);
         margin: auto 10%;
+    }
+    .standard{
+      background-color: white;
     }
         .circle,.stories-card01{
             display:none;
@@ -379,6 +439,9 @@ max-width: 400px;
           margin: 0 auto;
           max-width: 170px;
          }
+         .stories-content{
+          margin: auto 10%;
+         }
          .story-1{
           width: 100%;
         }
@@ -388,15 +451,21 @@ max-width: 400px;
           margin: 80px auto;
           align-items: center;
         }
+        .storybtn-2,.storybtn-2,.storybtn-4,.storybtn-5{
+          padding: 5px 10px;
+          font-size: 15px;
+        }
           .kids-02{
             margin-top: -25px;
             margin-left: 20px;
           }
           .footer-section{
             display: grid;
-            grid-template-columns: repeat(1,3fr)
+            grid-template-columns: repeat(1,3fr);
+            text-align: left;
+            margin-left: 20px;
+            
           }
-         .stories-card{
-          /* max-width: fit-content; */
+          
          }
 }
